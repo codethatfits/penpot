@@ -24,10 +24,10 @@
 # WARNING: if you're exposing Penpot to the internet, you should remove the flags
 # 'disable-secure-session-cookies' and 'disable-email-verification'
 x-flags: &penpot-flags
-  PENPOT_FLAGS: disable-email-verification enable-smtp enable-prepl-server disable-secure-session-cookies enable-mcp
+  PENPOT_FLAGS: enable-smtp enable-prepl-server enable-mcp
 
 x-uri: &penpot-public-uri
-  PENPOT_PUBLIC_URI: http://localhost:9001
+  PENPOT_PUBLIC_URI: https://design.elevatetheweb.co
 
 x-body-size: &penpot-http-body-size
   # Max body size
@@ -43,7 +43,7 @@ x-body-size: &penpot-http-body-size
 ##
 ## python3 -c "import secrets; print(secrets.token_urlsafe(64))"
 x-secret-key: &penpot-secret-key
-  PENPOT_SECRET_KEY: change-this-insecure-key
+  PENPOT_SECRET_KEY: lJbwDqKYBPopcddCB2YJKnGpz396unCQOH5OZuw5EBrRbVT1TU8Mm-Vk_k87lyu7Tyw68tq9BN1DO0qerm02Cg
 
 networks:
   penpot:
